@@ -4,6 +4,7 @@ const model = {
         currentPage: 'loginPage',
         mainMenu: false,
         filter: false,
+        selectedActivityId: 0,
     },
     input: {
         login: {
