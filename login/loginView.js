@@ -3,6 +3,6 @@ function drawLoginView(){
     <input placeholder='username' onchange="model.input.login.username = this.value">
     <input type='password' onchange="model.input.login.password = this.value" placeholder='password'>
     <button onclick="logIn()">Log on</button>
-    <div onclick="registerUserClicked()">Registrer deg her</div>
+    <button onclick="registerUserClicked()">Registrer deg her</button>
     `;
 }
