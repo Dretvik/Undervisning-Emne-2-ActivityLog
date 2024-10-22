@@ -8,6 +8,7 @@ function logIn(){
     else{
         alert('INNCORRECT PASSWORD')
     }
+    // Cleane input i modellen
 }
 
 function registerUserClicked(){
