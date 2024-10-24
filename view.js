@@ -11,4 +11,7 @@ function updateView(){
     else if(page == 'signUpPage'){
         drawSignUpPage()
     }
+    else if(page == 'addActivityPage'){
+        drawActivityAddingTrash();
+    }
 }

@@ -5,6 +5,7 @@ function drawSignUpPage(){
     <input placeholder="By" onchange="model.input.createUser.city = this.value">
     <input placeholder="Passord" onchange="model.input.createUser.password = this.value">
     <input placeholder="Gjenta Passord" onchange="model.input.createUser.repeatPw = this.value">
-    <button onclick="createUser()">Registrer</button>
+    <button onclick="registerUser()">Registrer</button>
+    <div>${model.app.errorMsg}</div>
     `;
 }

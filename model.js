@@ -3,10 +3,11 @@ const app = document.getElementById('app');
 const model = {
     app: {
         loggedInUser: null,
-        currentPage: 'loginPage',
+        currentPage: 'addActivityPage',
         mainMenu: false,
         filter: false,
         selectedActivityId: 0,
+        errorMsg: ''
     },
     input: {
         login: {
