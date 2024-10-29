@@ -3,7 +3,7 @@ function drawHomePageView(){
     <h1>Velkommen</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare venenatis gravida. Nunc non feugiat dui. Quisque et mauris vitae tellus mollis gravida vel nec nunc. Fusce vitae dolor eu nibh luctus consectetur. Etiam ornare ultrices est, ut placerat augue ultrices eget. Nam tempus sem ligula, in lacinia metus ultricies lobortis.</p>
     <div>${drawTopActivities()}</div>
-    <button onclick="#">Se alle aktiviteter</button>
+    <button onclick="showAllActivities()">Se alle aktiviteter</button>
     `;
 }
 

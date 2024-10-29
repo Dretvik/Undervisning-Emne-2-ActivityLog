@@ -14,4 +14,7 @@ function updateView(){
     else if(page == 'addActivityPage'){
         drawActivityAddingTrash();
     }
+    else if(page == 'activityPage'){
+        drawActivityPage();
+    }
 }
