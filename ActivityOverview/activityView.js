@@ -21,13 +21,13 @@ function drawUpFilters(){
 function renderFilteredActivities(activities) {
     let activitiesHTML = activities.map(activity => /*HTML*/`
         <div>
-        <img src="${activity.activityImg}">
-        <h4>${activity.activityName}</h4>
-        <p><span>Vanskelighet: </span>${activity.difficulty}</p>
-        <p><span>Tid: </span>${activity.time} minutter</p>
-        <p><span>Omtaler: </span>Ikke på plass enda..</p>
-        
-        <button onclick="#">Se mer</button>
+            <img src="${activity.activityImg}">
+            <h4>${activity.activityName}</h4>
+            <p><span>Vanskelighet: </span>${activity.difficulty}</p>
+            <p><span>Tid: </span>${activity.time} minutter</p>
+            <p><span>Omtaler: </span>Ikke på plass enda..</p>
+            
+            <button onclick="#">Se mer</button>
         </div>`
     ).join('');
     

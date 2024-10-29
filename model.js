@@ -3,7 +3,7 @@ const app = document.getElementById('app');
 const model = {
     app: {
         loggedInUser: null,
-        currentPage: 'homePage',
+        currentPage: 'activityPage',
         mainMenu: false,
         filter: false,
         selectedActivityId: 0,
