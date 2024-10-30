@@ -1,5 +1,108 @@
+function toggleCategory(categoryId){
+
+    if(isCategoryFilterOn(categoryId)){
+        removeCategoryFromFilter(categoryId)
+    }
+    else{
+        addCategoryToFilter(categoryId)
+    }
+
+    updateFilteredActivities()
+}
+function initCheck(){
+    if(model.app.init == true){
+        resetFilters()
+        model.app.init = false;
+    }
+}
+
+function resetFilters(){
+    model.app.filteredActivities = model.data.activities;
+}
+function isCategoryFilterOn(categoryId){
+    if(model.input.filter.category.find(cat => cat.categoryId == categoryId).checked == true)
+        return true;
+    else 
+        return false;
+}
+
+function addCategoryToFilter(categoryId){
+    model.input.filter.category.find(category => category.categoryId == categoryId).checked = true;
+}
+
+function removeCategoryFromFilter(categoryId){
+    model.input.filter.category.find(category => category.categoryId == categoryId).checked = false;
+}
+
+function toggleDifficulty(difficultyId){
+  if(isDifficultyFilterOn(difficultyId)){
+    removeDifficultyFilter(difficultyId)
+  }
+  else{
+    addDifficultyFilter(difficultyId)
+  }
+  updateFilteredActivities()
+}
+
+function isDifficultyFilterOn(difficultyId){
+    if(model.input.filter.difficulty.find(difficulty => difficulty.difficultyId == difficultyId).checked == true)
+        return true;
+    else 
+        return false;
+}
+
+function addDifficultyFilter(difficultyId){
+    model.input.filter.difficulty.find(difficulty => difficulty.difficultyId == difficultyId).checked = true;
+}
+
+function removeDifficultyFilter(difficultyId){
+    model.input.filter.difficulty.find(difficulty => difficulty.difficultyId == difficultyId).checked = false;
+}
+
+function updateFilteredActivities(){
+    resetFilters();
+    applyCategoryFilters();
+    applyDifficultyFilters();    
+    updateView();
+}
+
+
+function applyCategoryFilters(){
+    let filterIds = model.input.filter.category.filter(cat => cat.checked == true); 
+    if(filterIds.length == 0){
+        return;
+    }
+    let tempArray = [];
+
+    filterIds.forEach(category => {
+        let matchingActivitiesToCategory = model.app.filteredActivities.filter(activity => activity.categoryId == category.categoryId)
+        tempArray = tempArray.concat(matchingActivitiesToCategory)
+    })
+
+    model.app.filteredActivities = tempArray
+}
+
+function applyDifficultyFilters(){
+    let difficultyFiltered = model.input.filter.difficulty.filter(diff => diff.checked == true); 
+    if(difficultyFiltered.length == 0){
+        return;
+    }
+
+    let tempArray = [];
+    console.log(model.app.filteredActivities)
+    difficultyFiltered.forEach( difficulty => {
+
+        let difficultyObj = getDifficultyById(difficulty.difficultyId)
+        let match = model.app.filteredActivities.filter(activity => activity.difficulty >= difficultyObj.value.min && activity.difficulty <= difficultyObj.value.max)
+        tempArray = tempArray.concat(match)
+    })
+  
+    model.app.filteredActivities = tempArray
+}
+
+/*
 function applyFilters(){
-    let selectedCategories = getSelectedCategories();
+   /* let selectedCategories = getSelectedCategories();
     let selectedDifficulties = getSelectedDifficulties();
 
     model.input.filter.category = selectedCategories;
@@ -19,7 +122,7 @@ function applyFilters(){
     }
 
 }
-
+/*
 function getSelectedCategories() {
     let categories = [];
     if(document.getElementById('category21').checked) categories.push(21);
@@ -35,8 +138,8 @@ function getSelectedDifficulties(){
     if(document.getElementById('difficulty7-8').checked) difficulties.push({min: 7, max: 8});
     if(document.getElementById('difficulty9-10').checked) difficulties.push({min: 9, max: 10});
     return difficulties;
-}
-
+}*/
+/*
 function filteredActivitiesCategory(categoryId){
     return model.data.activities.filter(activity => categoryId.includes(activity.categoryId))
 }
@@ -53,4 +156,4 @@ function filteredActivitiesCategoryAndDifficulty(categoryId, difficulties){
         let difficultyMatch = difficulties.some(range => activity.difficulty >= range.min && activity.difficulty <= range.max);
         return categoryMatch && difficultyMatch;
     });
-}
+}*/

@@ -7,6 +7,8 @@ const model = {
         mainMenu: false,
         filter: false,
         selectedActivityId: 0,
+        filteredActivities: [],
+        init: true,
         errorMsg: ''
     },
     input: {
@@ -22,8 +24,35 @@ const model = {
             repeatPw: '',
         },
         filter: {
-            category: null,
-            difficulty: null,
+            category: [{
+                checked: false,
+                categoryId: 21
+            },
+            {
+                checked: false,
+                categoryId: 19
+            }
+            ],
+            difficulty: [{
+                difficultyId: 0,
+                checked: false,
+            },
+            {
+                difficultyId: 1,
+                checked: false,
+            },
+            {
+                difficultyId: 2,
+                checked: false,
+            },
+            {
+                difficultyId: 3,
+                checked: false,
+            },
+            {
+                difficultyId: 4,
+                checked: false,
+            }],
         },
         uploadActivity: {
             activityImg: '',
@@ -86,6 +115,26 @@ const model = {
                 description: 'Ferskvanns fiske',
                 categoryId: 21,
             },
+            {
+                activityName: 'Ballet',
+                activityId: 2,
+                activityImg: null,
+                difficulty: 7,
+                time: 120,
+                equipment: [],
+                description: 'Danse på tå',
+                categoryId: 19,
+            },
+            {
+                activityName: 'Hip hop dans',
+                activityId: 2,
+                activityImg: null,
+                difficulty: 4,
+                time: 120,
+                equipment: [],
+                description: 'Danse med swag',
+                categoryId: 19,
+            },
         ],
         equipment: [
             {
@@ -96,6 +145,38 @@ const model = {
                 equipmentName: 'fiskestang',
                 equipmentId: 2,
             },
+        ],
+        difficulties: [
+            {   difficultyId: 0,
+                name: '1-2',
+                checked: false,
+                value: {min: 1,
+                        max: 2}
+            },
+            {   difficultyId: 1,
+                name: '3-4',
+                checked: false,
+                value: {min: 3,
+                        max: 4}
+            },
+            {   difficultyId: 2,
+                name: '5-6',
+                checked: false,
+                value: {min: 5,
+                        max: 6}
+            },
+            {   difficultyId: 3,
+                name: '7-8',
+                checked: false,
+                value: {min: 7,
+                        max: 8}
+            },
+            {   difficultyId: 4,
+                name: '9-10',
+                checked: false,
+                value: {min: 9,
+                        max: 10}
+            }
         ],
         categories: [
             {
