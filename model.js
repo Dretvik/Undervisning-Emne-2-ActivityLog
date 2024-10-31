@@ -127,7 +127,7 @@ const model = {
             },
             {
                 activityName: 'Hip hop dans',
-                activityId: 2,
+                activityId: 3,
                 activityImg: null,
                 difficulty: 4,
                 time: 120,
@@ -149,31 +149,26 @@ const model = {
         difficulties: [
             {   difficultyId: 0,
                 name: '1-2',
-                checked: false,
                 value: {min: 1,
                         max: 2}
             },
             {   difficultyId: 1,
                 name: '3-4',
-                checked: false,
                 value: {min: 3,
                         max: 4}
             },
             {   difficultyId: 2,
                 name: '5-6',
-                checked: false,
                 value: {min: 5,
                         max: 6}
             },
             {   difficultyId: 3,
                 name: '7-8',
-                checked: false,
                 value: {min: 7,
                         max: 8}
             },
             {   difficultyId: 4,
                 name: '9-10',
-                checked: false,
                 value: {min: 9,
                         max: 10}
             }
