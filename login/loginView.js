@@ -1,6 +1,6 @@
 function drawLoginView(){
     document.getElementById('app').innerHTML = /*HTML*/`
-   
+    ${header()}
     <section class="full-size flex-column center align-self-center">
         <h1>Logg inn</h1>
         <input type="text" placeholder='username' onchange="model.input.login.username = this.value">
