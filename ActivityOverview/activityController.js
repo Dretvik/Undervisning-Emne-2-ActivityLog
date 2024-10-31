@@ -89,7 +89,6 @@ function applyDifficultyFilters(){
     }
 
     let tempArray = [];
-    console.log(model.app.filteredActivities)
     difficultyFiltered.forEach( difficulty => {
 
         let difficultyObj = getDifficultyById(difficulty.difficultyId)

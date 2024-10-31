@@ -24,14 +24,20 @@ const model = {
             repeatPw: '',
         },
         filter: {
-            category: [{
+            category: [
+            {
+                    checked: false,
+                    categoryId: 0
+            },
+            {
                 checked: false,
                 categoryId: 21
             },
             {
                 checked: false,
                 categoryId: 19
-            }
+            },
+           
             ],
             difficulty: [{
                 difficultyId: 0,
@@ -135,6 +141,16 @@ const model = {
                 description: 'Danse med swag',
                 categoryId: 19,
             },
+            {
+                activityName: 'Løping',
+                activityId: 4,
+                activityImg: null,
+                difficulty: 4,
+                time: 120,
+                equipment: [],
+                description: 'svette fælt',
+                categoryId: 0,
+            },
         ],
         equipment: [
             {
@@ -175,6 +191,10 @@ const model = {
         ],
         categories: [
             {
+                categoryName: 'Kondisjon',
+                categoryId: 0,
+            },
+            {
                 categoryName: 'friluftsliv',
                 categoryId: 21,
             },
@@ -194,6 +214,30 @@ const model = {
                 userId: 1,
                 activityId: 0,
                 rating: 3,
+                review: 'Dette var vanskelig',
+            },
+            {
+                userId: 999,
+                activityId: 2,
+                rating: 1,
+                review: 'Dette var ikke noe for meg',
+            },
+            {
+                userId: 2,
+                activityId: 2,
+                rating: 3,
+                review: 'Dette var vanskelig',
+            },
+            {
+                userId: 2,
+                activityId: 3,
+                rating: 3,
+                review: 'Dette var vanskelig',
+            },
+            {
+                userId: 2,
+                activityId: 4,
+                rating: 7,
                 review: 'Dette var vanskelig',
             },
         ],

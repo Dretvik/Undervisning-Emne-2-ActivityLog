@@ -1,3 +1,4 @@
+
 function drawActivityPage(){
     app.innerHTML =  /*HTML*/`
     ${drawUpFilters()}
@@ -50,11 +51,13 @@ function renderFilteredActivities() {
             <h4>${activity.activityName}</h4>
             <p><span>Vanskelighet: </span>${activity.difficulty}</p>
             <p><span>Tid: </span>${activity.time} minutter</p>
-            <p><span>Omtaler: </span>Ikke på plass enda..</p>
+            <p><span>Omtaler: </span>${getActivityReview(activity.activityId)}</p>
             
-            <button onclick="#">Se mer</button>
+            <button onclick="selectActivity(${activity.activityId})">Se mer</button>
         </div>`
     ).join('');
     
     return activitiesHTML;
 }
+
+

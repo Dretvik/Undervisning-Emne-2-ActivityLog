@@ -17,4 +17,7 @@ function updateView(){
     else if(page == 'activityPage'){
         drawActivityPage();
     }
+    else if(page == 'singleActivityView'){
+        singleActivityView();
+    }
 }
