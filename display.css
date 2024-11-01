@@ -34,7 +34,7 @@
     align-self: center;
 }
 
-.top-section-grid{
+.grid-2-fr{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
@@ -60,7 +60,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .top-section-grid{
+    .margin-20-desktop{
         margin-left: 20%;
         margin-right: 20%;
     }

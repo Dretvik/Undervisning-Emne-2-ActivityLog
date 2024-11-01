@@ -7,10 +7,18 @@ function drawActivityPage(){
 function drawUpFilters(){
     return /*HTML*/`
     <div>
-        <h5>Kategorier</h5>
-        ${drawCategoryFilters()}
-        <h5>Vanskelighet</h5>
-        ${drawDifficultyFilters()}
+        <fieldset>
+            <legend>Kategorier</legend>
+            <div class="grid-2-fr">
+            ${drawCategoryFilters()}
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Vanskelighet</legend>
+            <div class="grid-2-fr">
+            ${drawDifficultyFilters()}
+            </div>
+        </fieldset>
     </div>
     `;
 }
