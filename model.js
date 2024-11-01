@@ -61,7 +61,7 @@ const model = {
             }],
         },
         uploadActivity: {
-            activityImg: '',
+            activityImg: 'assets/img/default_img.jpg',
             activityName: '',
             difficulty: null,
             time: 0,
@@ -89,7 +89,7 @@ const model = {
                 email: 'børge@getacademy.no',
                 city: 'Larvik',
                 password: '1234',
-                profilePicture: null,
+                profilePicture: 'assets/img/default_profile.jpg',
             },
             {
                 username: 'lars',
@@ -97,14 +97,14 @@ const model = {
                 email: 'lars@getacademy.no',
                 city: 'Larvik',
                 password: '1234',
-                profilePicture: null,
+                profilePicture: 'assets/img/default_profile.jpg',
             },
         ],
         activities: [
             {
                 activityName: 'Klatring',
                 activityId: 0,
-                activityImg: null,
+                activityImg: 'assets/img/default_img.jpg',
                 difficulty: 4,
                 time: 60,
                 equipment: [0,],
@@ -114,7 +114,7 @@ const model = {
             {
                 activityName: 'Fiske',
                 activityId: 1,
-                activityImg: null,
+                activityImg: 'assets/img/default_img.jpg',
                 difficulty: 2,
                 time: 120,
                 equipment: [2,],
@@ -124,7 +124,7 @@ const model = {
             {
                 activityName: 'Ballet',
                 activityId: 2,
-                activityImg: null,
+                activityImg: 'assets/img/default_img.jpg',
                 difficulty: 7,
                 time: 120,
                 equipment: [],
@@ -134,7 +134,7 @@ const model = {
             {
                 activityName: 'Hip hop dans',
                 activityId: 3,
-                activityImg: null,
+                activityImg: 'assets/img/default_img.jpg',
                 difficulty: 4,
                 time: 120,
                 equipment: [],
@@ -144,7 +144,7 @@ const model = {
             {
                 activityName: 'Løping',
                 activityId: 4,
-                activityImg: null,
+                activityImg: 'assets/img/default_img.jpg',
                 difficulty: 4,
                 time: 120,
                 equipment: [],
