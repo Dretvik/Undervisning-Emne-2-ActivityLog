@@ -1,6 +1,7 @@
 
 function drawActivityPage(){
     app.innerHTML =  /*HTML*/`
+    ${header()}
     ${drawUpFilters()}
     ${renderFilteredActivities()}`
 }
