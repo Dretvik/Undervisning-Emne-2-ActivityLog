@@ -54,12 +54,25 @@ function drawDifficultyFilters(){
 function renderFilteredActivities() {
     initCheck();
     let activitiesHTML = model.app.filteredActivities.map(activity => /*HTML*/`
-        <div>
+        <div class="activity-showcase-horizontal grid-col-gap align-items-center margin-20-desktop">
             <img src="${activity.activityImg}">
-            <h4>${activity.activityName}</h4>
-            <p><span>Vanskelighet: </span>${activity.difficulty}</p>
-            <p><span>Tid: </span>${activity.time} minutter</p>
-            <p><span>Omtaler: </span>${getActivityReview(activity.activityId)}</p>
+                <div>
+                    <h2>${activity.activityName}</h2>
+                    <ul class="remove-bullet">
+                        <li class="grid-2-fr">
+                            <i>Grad:</i>
+                            <b>${activity.difficulty}</b>
+                        </li>
+                        <li class="grid-2-fr">
+                            <i>Tid:</i>
+                            <b>${activity.time} min.</b>
+                        </li>
+                        <li class="grid-2-fr">
+                            <i>Omtaler:</i>
+                            <b>${getActivityReview(activity.activityId)}</b>
+                        </li>
+                    </ul>
+                </div>
             
             <button onclick="selectActivity(${activity.activityId})">Se mer</button>
         </div>`
