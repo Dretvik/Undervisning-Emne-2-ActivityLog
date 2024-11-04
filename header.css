@@ -28,4 +28,62 @@
     position: fixed;  
     top: 2%;
     right: 5%;
+    z-index: 13;
+    display: flex;
+    align-items: center;
+    
 }
+
+.menuContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.634);
+    backdrop-filter: blur(3px);
+    padding: 80px 40px;
+    margin: 0;
+    height: 100vh;
+    
+    transform: translateX(100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 12;
+}
+
+.menu input{
+    display: none;
+}
+.menu label {
+    cursor: pointer;
+    z-index: 15;
+    
+}
+.menu label span {
+    display: block;
+    width: 50px;
+    height: 4px;
+    margin: 7px 0;
+    background-color: #4286f5;
+    border-radius: 3px;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    transform-origin: left center;
+  }
+
+  .menu input:checked ~ label span {
+    transform: rotate(-27deg);
+  }
+  
+  .menu input:checked ~ label span:nth-last-child(2) {
+    width: 0%;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .menu input:checked ~ label span:nth-last-child(3) {
+    transform: rotate(27deg);
+  }
+  .menu input:checked ~ .menuContainer{
+    transform: translateX(0);
+    opacity: 1;
+  }

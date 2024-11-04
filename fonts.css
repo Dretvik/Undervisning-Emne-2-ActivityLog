@@ -10,3 +10,18 @@ p{
 .title{
     font-size: 40px;
 }
+
+.bold{
+    font-weight: 700;
+}
+.font-size-larger{
+    font-size: larger;
+}
+
+.color-gray{
+    color: gray;
+}
+
+.color-main-blue{
+    color: #4286f5;
+}

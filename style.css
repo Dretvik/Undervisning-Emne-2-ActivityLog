@@ -62,11 +62,14 @@ button{
    
 }
 
-.remove-bullet {
+ul.remove-bullet {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
+menu.remove-bullet{
+    list-style-type: none;
+}
 
 
 img {
