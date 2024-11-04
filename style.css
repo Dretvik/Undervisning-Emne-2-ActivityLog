@@ -95,3 +95,11 @@ section{
     padding-left: 2%;
     padding-right: 2%;
 }
+
+.cursor{
+    cursor: pointer;
+    transition: all .2s ease-in-out; 
+}
+.cursor:hover { 
+    transform: scale(1.1); 
+  }

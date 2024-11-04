@@ -33,19 +33,19 @@ function createMenuComponents(){
         if(model.app.currentPage === element.path){
             html += /*HTML*/
         `
-        <li class="bold color-main-blue font-size-larger" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
+        <li class="cursor bold color-main-blue font-size-larger" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
         `
         }
         else if(model.app.currentPage === null){
             html += /*HTML*/
         `
-        <li class="color-gray" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
+        <li class="cursor color-gray" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
         `
         }
         else{
             html += /*HTML*/
             `
-            <li class="color-main-blue" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
+            <li class="cursor color-main-blue" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
             `
         }
     });
