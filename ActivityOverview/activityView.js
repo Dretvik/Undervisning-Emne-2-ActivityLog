@@ -2,8 +2,10 @@
 function drawActivityPage(){
     app.innerHTML =  /*HTML*/`
     ${header()}
+    <main>
     ${drawUpFilters()}
     ${renderFilteredActivities()}
+    </main>
     ${footer()}`
 }
 function drawUpFilters(){
@@ -71,7 +73,10 @@ function renderFilteredActivities() {
                         </li>
                         <li class="grid-2-fr">
                             <i>Omtaler:</i>
-                            <b>${getActivityReview(activity.activityId)}</b>
+                            <b class="flex-row">
+                                ${getActivityReview(activity.activityId)} 
+                                <div class="color-main-blue">★</div>
+                            </b>
                         </li>
                     </ul>
                 </div>

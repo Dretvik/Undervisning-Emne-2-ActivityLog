@@ -15,6 +15,7 @@
 body {
   box-sizing: border-box;
   min-height: 100vh;
+  
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -22,6 +23,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 h1{
@@ -37,7 +39,7 @@ input[type="password"]{
     border-radius: .5em;
     background:transparent;
     background-color: rgb(230, 230, 230);
-    width: 50%;
+    width: 100%;
 }
 input[type="text"]:focus,
 input[type="password"]:focus{
@@ -74,6 +76,7 @@ menu.remove-bullet{
 
 img {
     max-width: 100%;
+    transition: scale 0.5s ease;
   }
 
 .full-size{
@@ -103,3 +106,21 @@ section{
 .cursor:hover { 
     transform: scale(1.1); 
   }
+
+  img:hover{
+    scale: 1.1;
+  }
+
+
+  @media screen and (min-width: 800px) {
+    input[type="text"],
+    input[type="password"]{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 992px) {
+    input[type="text"],
+    input[type="password"]{
+        width: 50%;
+    }
+}

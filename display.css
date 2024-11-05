@@ -1,5 +1,5 @@
 
-#app {
+/* #app {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -10,6 +10,36 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+} */
+
+#app {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+} 
+
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10%;
+    padding: 0px 5%;
+}
+footer{
+    grid-area: footer;
 }
 
 
@@ -60,8 +90,9 @@
 
 .activity-showcase-horizontal{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    gap: 2%;
 
     div h2{
         font-weight: 300;
@@ -87,6 +118,7 @@ footer{
     grid-template-areas: 'part1 part2 part3'
                         'footerBottom footerBottom footerBottom';
     justify-items: center;
+    align-items: center;
    
     width: 100%;
     height: auto;
@@ -144,9 +176,29 @@ footer div ul {
     align-self: center;
   }
 
-@media screen and (min-width: 992px) {
+  @media screen and (max-width: 700px) {
+    .homepage-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .activity-showcase-horizontal{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    main{
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
     .margin-20-desktop{
-        margin-left: 20%;
-        margin-right: 20%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }

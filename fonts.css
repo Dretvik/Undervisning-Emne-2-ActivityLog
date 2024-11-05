@@ -26,5 +26,28 @@ p{
     color: #4286f5;
 }
 
-/*HOVER*/
+p.font-size-smaller{
+    font-size: 11px;
+}
+p.font-size-small{
+    font-size: 12px;
+}
+.letter-spacing-2px{
+    letter-spacing: 2px;
+}
 
+p.font-size-medium{
+    font-size: 14px;
+}
+
+h2.medium-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+@media screen and (min-width: 800px) {
+    p.font-size-small{
+        font-size: 14px;
+    }
+}
