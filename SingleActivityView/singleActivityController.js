@@ -3,3 +3,8 @@ function selectActivity(activityId){
     model.app.currentPage = 'singleActivityView';
     updateView();
 }
+
+function showAllReviewsOFActivity(){
+    model.app.currentPage = 'reviewPage';
+    updateView();
+}

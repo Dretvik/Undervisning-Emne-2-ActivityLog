@@ -30,6 +30,11 @@ function getUserByUserName(userName){
 function filterReviewOfActivityById(activityId){
   return model.data.reviews.filter(review => review.activityId == activityId)
 }
+function findTotalReviewsForUser(userId){
+  let reviews = model.data.reviews.filter(review => review.userId == userId);
+
+  return reviews 
+}
 
 function addRatingOfSingleActivity(allareviews){
   let average = 0;

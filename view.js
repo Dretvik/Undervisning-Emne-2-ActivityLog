@@ -20,4 +20,10 @@ function updateView(){
     else if(page == 'singleActivityView'){
         singleActivityView();
     }
+    else if(page == 'reviewPage'){
+        drawAllReviews();
+    }
+    else if(page == 'userPage'){
+        drawUserProfile();
+    }
 }

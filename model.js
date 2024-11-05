@@ -9,7 +9,9 @@ const model = {
         selectedActivityId: 0,
         filteredActivities: [],
         init: true,
-        errorMsg: ''
+        errorMsg: '',
+        selectedProfileId: null,
+
     },
     input: {
         login: {
@@ -96,6 +98,14 @@ const model = {
                 userId: 1,
                 email: 'lars@getacademy.no',
                 city: 'Larvik',
+                password: '1234',
+                profilePicture: 'assets/img/default_profile.jpg',
+            },
+            {
+                username: 'marie',
+                userId: 2,
+                email: 'marie@getacademy.no',
+                city: 'skogen',
                 password: '1234',
                 profilePicture: 'assets/img/default_profile.jpg',
             },
@@ -209,6 +219,18 @@ const model = {
                 activityId: 0,
                 rating: 7,
                 review: 'Super kult',
+            },
+            {
+                userId: 999,
+                activityId: 1,
+                rating: 7,
+                review: 'Ro i Sjela',
+            },
+            {
+                userId: 2,
+                activityId: 1,
+                rating: 5,
+                review: 'Får aldri Fisk',
             },
             {
                 userId: 1,

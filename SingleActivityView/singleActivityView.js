@@ -4,7 +4,7 @@ function singleActivityView(){
     ${header()}
         <div>
            <div> Omtaler:${getActivityReview(model.app.selectedActivityId)} </div>   
-           <button> se alle </button> 
+           <button onclick="showAllReviewsOFActivity()"> se alle </button> 
             <div> Tid: ${activity.time}</div>  
             <div> Grad: ${activity.difficulty}</div>  
             <div> Kategori: ${getCategoryNameById(activity.categoryId)}</div> 
@@ -12,3 +12,5 @@ function singleActivityView(){
         </div>
     `;
 }
+
+
