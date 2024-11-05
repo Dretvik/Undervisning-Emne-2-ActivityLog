@@ -3,7 +3,8 @@ function drawActivityPage(){
     app.innerHTML =  /*HTML*/`
     ${header()}
     ${drawUpFilters()}
-    ${renderFilteredActivities()}`
+    ${renderFilteredActivities()}
+    ${footer()}`
 }
 function drawUpFilters(){
     return /*HTML*/`
