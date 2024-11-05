@@ -2,6 +2,9 @@ function drawAllReviews(){
     let html = '';
     let allReviewsOfActivty = filterReviewOfActivityById(model.app.selectedActivityId)
     // console.log(allReviewsOfActivty, 'Hva er dette ?')
+    html = /*HTML*/`
+        ${header()}
+        <main>`
     for(let i = 0; i < allReviewsOfActivty.length; i++){
         let user = getUser(allReviewsOfActivty[i].userId)
         console.log(user, ' hva er user ? ')
@@ -14,6 +17,9 @@ function drawAllReviews(){
         </div>
         `
     }
+    html += /*HTML*/`
+    </main>
+    ${footer()}`
     app.innerHTML = html;
 }
 

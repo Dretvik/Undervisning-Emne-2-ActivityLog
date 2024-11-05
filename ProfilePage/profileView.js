@@ -3,14 +3,18 @@ function drawUserProfile(){
     // console.log(user, 'Hva er user')
     let html = '';
         html += `
-        <div> Brukernavn: ${user.username}</div>
-        <div> By: ${user.city}</div>
-        <div> Omtaler: ${findTotalReviewsForUser(user.userId).length}</div>
+        ${header()}
+        <main>
+            <div> Brukernavn: ${user.username}</div>
+            <div> By: ${user.city}</div>
+            <div> Omtaler: ${findTotalReviewsForUser(user.userId).length}</div>
 
-        <div>
-        alle Omtaler: 
-        ${viewAllReviewsOfUser(user.userId)}
-        </div>
+            <div>
+            alle Omtaler: 
+            ${viewAllReviewsOfUser(user.userId)}
+            </div>
+        </main>
+         ${footer()}
         `
 
     app.innerHTML = html;
