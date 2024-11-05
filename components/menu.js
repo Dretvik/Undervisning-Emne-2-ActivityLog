@@ -29,14 +29,13 @@ function createMenuComponents(){
 
     let html = "";
     menuItems.forEach((element) => {
-        console.log(element.path)
         if(model.app.currentPage === element.path){
             html += /*HTML*/
         `
         <li class="cursor bold color-main-blue font-size-larger" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
         `
         }
-        else if(model.app.currentPage === null){
+        else if(element.path === null){
             html += /*HTML*/
         `
         <li class="cursor color-gray" onclick="menuElementChangePage('${element.path}')">${element.name}</li>
