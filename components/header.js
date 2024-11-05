@@ -20,4 +20,3 @@ function header(){
     `;
 }
 
-//<span class="menu">${menu()}</span>
